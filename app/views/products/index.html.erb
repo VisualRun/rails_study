@@ -1,5 +1,5 @@
 <h1>Listing products</h1>
-
+<%= link_to 'New products', new_product_path %>
 <table>
   <tr>
     <th>Title</th>
@@ -10,6 +10,8 @@
     <tr>
       <td><%= products.title %></td>
       <td><%= products.text %></td>
+      <td><%= link_to 'Show', products_path(products) %></td>
+      <td><%= link_to 'Edit', edit_product_path(products) %></td>
     </tr>
   <% end %>
 </table>
