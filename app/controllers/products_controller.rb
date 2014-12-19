@@ -18,7 +18,8 @@ class ProductsController < ApplicationController
     @products = Products.find(params[:id])
   end
 
-  private def products_params
+  private
+  def products_params
     params.require(:products).permit(:title,:text)
   end
 end
