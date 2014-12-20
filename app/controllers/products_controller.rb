@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def new
     @product = Products.new
   end
-  
+
   def create
     #render plain: params[:products].inspect
     @product = Products.new(product_params)
@@ -29,12 +29,19 @@ class ProductsController < ApplicationController
 
   def update
     @product = Products.find(params[:id])
- 
+
     if @product.update(product_params)
       redirect_to @product
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @product = Products.find(params[:id])
+    @product.destroy
+
+    redirect_to products_path
   end
 
   private
