@@ -6,5 +6,6 @@ module ApplicationHelper
       base_title                                      # 隐式返回值
     else
       "#{page_title} | #{base_title}"                 # 字符串插值”
+    end
   end
 end
