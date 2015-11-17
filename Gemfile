@@ -37,8 +37,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-# 
-#
+
+gem 'bootstrap-sass', '3.3.2.1'
+
 group :development,:test do
   gem 'sqlite3', '1.3.9'
   gem 'byebug', '3.4.0'
